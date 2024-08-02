@@ -102,6 +102,9 @@ const Dashboard = () => {
       <div className="flex-1 flex flex-col lg:flex-row">
         {/* Charts Container */}
         <main className="flex-1 p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 overflow-hidden">
+          <Card title="Case Mix by Incident Type">
+            <BarChart data={barData} />
+          </Card>
           <Card title="Cases by Priority">
             <DonutChart data={donutData} />
           </Card>
@@ -109,9 +112,6 @@ const Dashboard = () => {
             <div className="text-center">
               <p>(blank) (9)</p>
             </div>
-          </Card>
-          <Card title="Case Mix by Incident Type">
-            <BarChart data={barData} />
           </Card>
           <Card title="Case Mix (By Origin)">
             <PieChart data={pieData} />
